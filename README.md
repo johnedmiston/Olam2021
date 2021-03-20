@@ -26,6 +26,17 @@ OLAM Autoresponder is Open Source and is free under the GPL . You are free to do
 
 Dev setup instructions
 ======================
+Requires PHP and MySQL (MariaDB). 
+Tested using PHP 7.4.
+
+Requires mysqli extension enabled. Arch Linux users see https://wiki.archlinux.org/index.php/PHP#MySQL/MariaDB
+
+Before running the commands to create the database ensure mysql or MariaDB is running.
+systemd based distros can use the following:
+
+```
+$ systemctl start mysqld.service
+```
 
 ```
 $ mysqladmin create olam_autoresponder -u root -p
