@@ -22,3 +22,21 @@ Olam is Hebrew for eternity/forever ( a take off from "infinite").
  
 
 OLAM Autoresponder is Open Source and is free under the GPL . You are free to download it, modify it, and use it however you wish (as provided by the GPL).
+
+
+Dev setup instructions
+======================
+
+```
+$ mysqladmin create olam_autoresponder -u root -p
+$ mysql -u root -p -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES ON olam_autoresponder.* TO 'olam_autoresponder'@'localhost' IDENTIFIED BY '5tH7w34GlU'"
+```
+
+Edit config.php and fill in the database name, username and password.
+
+You might need to switch the database server from localhost to 127.0.0.1
+
+Then start the dev server:
+```
+$php -S localhost:8000
+```
