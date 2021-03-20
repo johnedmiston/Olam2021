@@ -38,10 +38,10 @@ session_start();
 require_once 'functions.php';
 
 # Set the siteURL
-if ((!isset($_SERVER['HTTPS'])) || ((strtolower($_SERVER['HTTPS'])) == "off")) {
-    $siteURL = "http://" . $_SERVER['SERVER_NAME'];
+if ((!isset($_SERVER['HTTPS'])) || ((strtolower($_SERVER['HTTPS'])) === "off")) {
+    $siteURL = "http://" . $_SERVER['HTTP_HOST'];
 } else {
-    $siteURL = "https://" . $_SERVER['SERVER_NAME'];
+    $siteURL = "https://" . $_SERVER['HTTP_HOST'];
 }
 
 # Timezone's don't really matter for this app, but we have to set one since older
@@ -128,4 +128,3 @@ if ($result->num_rows < 1) {
 $max_send_count = $config['max_send_count'];
 $last_activity_trim = $config['last_activity_trim'];
 $charset = $config['charset'];
-?>
