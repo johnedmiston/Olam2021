@@ -23,11 +23,14 @@ Olam is Hebrew for eternity/forever ( a take off from "infinite").
 
 OLAM Autoresponder is Open Source and is free under the GPL . You are free to download it, modify it, and use it however you wish (as provided by the GPL).
 
+Read manual.html for more information about how this software works.
 
 Dev setup instructions
 ======================
 Requires PHP and MySQL (MariaDB). 
 Tested using PHP 7.4.
+
+You will need some kind of SMTP server running to send email. SMTP4Dev could help you: https://github.com/rnwood/smtp4dev
 
 Requires mysqli extension enabled. Arch Linux users see https://wiki.archlinux.org/index.php/PHP#MySQL/MariaDB
 
