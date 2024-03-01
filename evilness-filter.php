@@ -46,12 +46,13 @@ function removeEvilAttributes($tagSource)
 
 function myaddslashes($st)
 {
-    if (get_magic_quotes_gpc()) {
+    if (ini_get('magic_quotes_gpc')) {
         return $st;
     } else {
         return addslashes($st);
     }
 }
+
 
 function makeSafe($UnsafeSource)
 {
